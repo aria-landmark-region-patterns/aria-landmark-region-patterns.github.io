@@ -44,9 +44,9 @@ function outputTemplate(fname, data) {
 
 
 const mainPages = [
-  { content: 'content-home.njk',
-    title: 'Design Patterns',
-    link: 'Home',
+  { content: 'content-principles.njk',
+    title: 'General Principles',
+    link: 'Principles',
     filename: 'index.html'
   },
   { content: 'content-html.njk',

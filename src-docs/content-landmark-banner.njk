@@ -1,0 +1,53 @@
+            <p>A <code>banner</code> landmark identifies site-oriented content at the beginning of each page within a website. Site-oriented content typically includes things such as the logo or identity of the site sponsor, and site-specific search tool. A banner usually appears at the top of the page and typically spans the full width.
+            </p>
+            <p>ARIA 1.2 Specification: <a href="https://www.w3.org/TR/wai-aria-1.2/#banner"><code>banner</code> landmark</a>.</p>
+            <h2>Design Patterns</h2>
+            <ul>
+              <li>Each page may have one <code>banner</code> landmark.</li>
+              <li>The <code>banner</code> landmark should be a top-level landmark.</li>
+              <li>When a page contains nested <code>document</code> and/or <code>application</code> roles (e.g. typically through the use of <code>iframe</code> and <code>frame</code> elements),
+                each <code>document</code> or <code>application</code> role may have one <code>banner</code> landmark.
+              </li>
+              <li>If a page includes more than one <code>banner</code> landmark, each should have a unique label.</li>
+            </ul>
+            <section aria-label="Coding Techniques">
+              <ul id="myTabs" class="nav nav-tabs" role="tablist">
+                <li class="active"><a id="tab2" href="#tabpanel2" aria-controls="tabpanel2" role="tab" data-toggle="tab">HTML Techniques</a></li>
+                <li><a id="tab1" href="#tabpanel1" aria-controls="tabpanel1" role="tab" data-toggle="tab">ARIA Techniques</a></li>
+              </ul>
+              <div class="tab-content">
+                <div id="tabpanel2" aria-labelledby="tab2"  role="tabpanel" class="tab-pane active">
+                  <ul>
+                    <li>The HTML <code>header</code> element defines a <code>banner</code> landmark when its context is the <code>body</code> element.</li>
+                    <li>
+                      The HTML <code>header</code> element is not considered a <code>banner</code> landmark when it is descendant of any of following elements:
+                      <ul>
+                        <li><code>article</code></li>
+                        <li><code>aside</code></li>
+                        <li><code>main</code></li>
+                        <li><code>nav</code></li>
+                        <li><code>section</code></li>
+                      </ul>
+                    </li>
+                  </ul>
+                  <h3>HTML Example</h3>
+                  <div class="code">
+                            <strong>&lt;header&gt;</strong>
+                    <br>
+                            &nbsp;&nbsp;&lt;h1&gt;<em>website information</em>&lt;h1&gt;<br>
+                            &nbsp;&nbsp;.... <em>banner content</em>....   <br>
+                            <strong>&lt;/header&gt;</strong>
+                  </div>
+                </div>
+                <div id="tabpanel1" aria-labelledby="tab1" role="tabpanel" class="tab-pane">
+                  <p>A <code>role="banner"</code> attribute is used to define a <code>banner</code> landmark.</p>
+                  <h3>ARIA Example</h3>
+                  <div class="code">
+                          &lt;div <strong>role="banner"</strong>&gt;<br>
+                          &nbsp;&nbsp;&lt;h1&gt;<em>page title identifying website</em>&lt;h1&gt;<br>
+                          &nbsp;&nbsp;.... <em>banner content</em>....   <br>
+                          &lt;/div&gt;<br>
+                  </div>
+                </div>
+              </div>
+            </section>
