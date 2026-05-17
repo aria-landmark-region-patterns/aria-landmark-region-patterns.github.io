@@ -728,8 +728,13 @@ main .faq details .content li {
 }
 
 main .code {
+  margin-top: 0.5em;
   padding: 0.5em;
   background-color: light-dark(#eee, #333);
+  border-color: light-dark(#ddd, #444);
+  border-width: 2px;
+  border-style: solid;
+  border-radius: 5px;
 }
 
 main .code code em {
