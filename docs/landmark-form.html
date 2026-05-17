@@ -13,7 +13,9 @@
 
     <link href="./css/bootstrap.min.css" rel="stylesheet" >
 
-    <link href="./css/opena11y.css" rel="stylesheet" />
+    <link href="./css/landmark-regions.css" rel="stylesheet" />
+
+    <link href="./css/visually.css" rel="stylesheet" />
 
 
 
@@ -28,13 +30,26 @@
                aria-label="Primary"
                id="mainNav">
               <div class="container px-4">
-                  <span class="brand">
-                    <span class="icon">
-                      <img src="./images/h2l-128-light.png" alt="Icon for Headings, Landmarks and Links Side Panel">
-                    </span>
-                    <span class="version">
-                      Version 1.0
-                    </span>
+                <span class="brand">
+                    <svg role="image"
+                         aria-label="Icon"
+                         viewBox="0 0 110 55" xmlns="http://www.w3.org/2000/svg">
+                      <g class="brand">
+                        <g class="aria">
+                          <rect x="0" y="5" width="26" height="52"></rect>
+                          <text x="-49" y="18" transform="rotate(-90)">ARIA</text>
+                        </g>
+                        <g class="landmark">
+                          <rect x="25" y="5" width="100" height="25"></rect>
+                          <text x="28" y="24">Landmark</text>
+                        </g>
+                        <g class="regions">
+                          <rect x="25" y="30" width="100" height="27"></rect>
+                          <text x="28" y="50">Regions</text>
+                        </g>
+                      </g>
+                    </svg>
+                </span>
                   </span>
 
                   <button class="navbar-toggler"
@@ -88,8 +103,14 @@
               </div>
           </nav>
           <div class="tagline">
-            <div class="container px-4" >
-              ARIA Landmark Region Patterns
+            <div id="main-section" class="container">
+              <div class="row gx-4 justify-content-left">
+                <div class="col-lg-12">
+                  <div class="container" style="position: relative; left: -8px">
+                    ARIA Landmark Region Patterns
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
        </header>
@@ -98,14 +119,12 @@
 
 
     <!-- Main section-->
-    <div id="main-section" class="container px-4">
-      <main class="container px-4">
-        <div class="row gx-4 justify-content-center">
-          <div class="col-lg-10">
+    <div id="main-section" class="container">
 
-            
+    
+      <div class="row gx-4 justify-content-left">
+        <div class="col-lg-12">
 
-                
                 <nav class="second-level" aria-label="Landmarks">
                   
                     
@@ -155,7 +174,16 @@
                     
                   
                 </nav>
-                
+        </div>
+      </div>
+    
+
+      <div class="row gx-4 justify-content-left">
+        <div class="col-lg-9">
+          <main class="container">
+
+            
+
 
                 <h1>Form Landmark</h1>
 
@@ -213,8 +241,16 @@
             </ul>
             <section aria-label="Coding Techniques">
               <ul id="myTabs" class="nav nav-tabs" role="tablist">
-                <li class="active"><a  id="tab2" href="#tabpanel2" aria-controls="tabpanel2"  role="tab" data-toggle="tab">HTML Techniques</a></li>
-                <li><a  id="tab1" href="#tabpanel1" aria-controls="tabpanel1"  role="tab" data-toggle="tab">ARIA Techniques</a></li>
+                <li class="nav-item" role="none">
+                  <a  class="nav-link" id="tab2" href="#tabpanel2" aria-controls="tabpanel2"  role="tab">
+                    HTML Techniques
+                  </a>
+                </li>
+                <li class="nav-item" role="none">
+                  <a class="nav-link" id="tab1" href="#tabpanel1" aria-controls="tabpanel1"  role="tab">
+                    ARIA Techniques
+                  </a>
+                </li>
               </ul>
               <div class="tab-content">
                 <div id="tabpanel2" aria-labelledby="tab2" role="tabpanel" class="tab-pane active">
@@ -261,15 +297,16 @@
 
                   <h3>Source Code</h3>
                   <div class="code">
+                    <code>
 
                     &nbsp;&nbsp;&lt;<strong>form aria-labelledby="contact"</strong>&gt;
                     <br>
                     &nbsp;&nbsp;&nbsp;&nbsp;&lt;fieldset&gt;<br>
                     <br>
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;legend <strong>id="contact"</strong>&gt;Add Contact &lt;/legend&gt;
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;legend <strong>id="contact"</strong>&gt;<em>Add Contact</em> &lt;/legend&gt;
                     <br>
                     <br>
-                    &nbsp;&nbsp;&nbsp;&nbsp;... <em>form controls add contact</em> ...
+                    &nbsp;&nbsp;&nbsp;&nbsp;<em>... form controls add contact ...</em>
                     <br>
                     <br>
                     &nbsp;&nbsp;&nbsp;&nbsp;&lt;/fieldset&gt;
@@ -283,16 +320,17 @@
                     <br>
                     &nbsp;&nbsp;&nbsp;&nbsp;&lt;fieldset&gt;<br>
                     <br>
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;legend <strong>id="organization"</strong>&gt;Add Organization &lt;/legend&gt;
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;legend <strong>id="organization"</strong>&gt;<em>Add Organization</em> &lt;/legend&gt;
                     <br>
                     <br>
-                    &nbsp;&nbsp;&nbsp;&nbsp;... <em>form controls add organization</em> ...
+                    &nbsp;&nbsp;&nbsp;&nbsp;<em>... form controls add organization ...</em>
                     <br>
                     <br>
                     &nbsp;&nbsp;&nbsp;&nbsp;&lt;/fieldset&gt;
                     <br>
                     &nbsp;&nbsp;&lt;<strong>/form</strong>&gt;
                     <br>
+                    </code>
                   </div>
                 </div>
                 <div id="tabpanel1" aria-labelledby="tab1" role="tabpanel" class="tab-pane">
@@ -340,15 +378,16 @@
 
                   <h3>Source Code</h3>
                   <div class="code">
+                    <code>
 
                     &nbsp;&nbsp;&lt;div <strong>role="form" aria-labelledby="contact"</strong>&gt;
                     <br>
                     &nbsp;&nbsp;&nbsp;&nbsp;&lt;fieldset&gt;<br>
                     <br>
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;legend <strong>id="contact"</strong>&gt;Add Contact &lt;/legend&gt;
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;legend <strong>id="contact"</strong>&gt;<em>Add Contact</em> &lt;/legend&gt;
                     <br>
                     <br>
-                    &nbsp;&nbsp;&nbsp;&nbsp;... <em>form controls add contact</em> ...
+                    &nbsp;&nbsp;&nbsp;&nbsp;<em>... form controls add contact ...</em>
                     <br>
                     <br>
                     &nbsp;&nbsp;&nbsp;&nbsp;&lt;/fieldset&gt;
@@ -362,16 +401,17 @@
                     <br>
                     &nbsp;&nbsp;&nbsp;&nbsp;&lt;fieldset&gt;<br>
                     <br>
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;legend <strong>id="organization"</strong>&gt;Add Organization &lt;/legend&gt;
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;legend <strong>id="organization"</strong>&gt;<em>Add Organization</em> &lt;/legend&gt;
                     <br>
                     <br>
-                    &nbsp;&nbsp;&nbsp;&nbsp;... <em>form controls add organization</em> ...
+                    &nbsp;&nbsp;&nbsp;&nbsp;<em>... form controls add organization ...</em>
                     <br>
                     <br>
                     &nbsp;&nbsp;&nbsp;&nbsp;&lt;/fieldset&gt;
                     <br>
                     &nbsp;&nbsp;&lt;/div&gt;
                     <br>
+                    </code>
                   </div>
                 </div>
               </div>
@@ -381,9 +421,70 @@
 
 
             
-          </div>
+          </main>
         </div>
-      </main>
+        <div class="col-lg-3">
+                      <aside class="container first" aria-labelledby="visualize">
+            <h2 id="visualize">Visualize Landmarks</h2>
+
+            <div class="content">
+               <p id="inst" class="inst">Visually outline the landmarks and/or headings on the page.</p>
+
+               <div class="button">
+                <button type="button" onclick="showLandmarks(event)" aria-describedby="inst">Show Landmarks</button>
+              </div>
+
+               <div class="button">
+                <button type="button" onclick="showHeadings(event)"  aria-describedby="inst">Show Headings</button>
+              </div>
+
+              <h3>Landmarks on Page</h3>
+
+              <ul class="counts">
+                <li>2 Complementary</li>
+                <li>1 Contentinfo</li>
+                <li>1 Banner</li>
+                <li>1 Main</li>
+                <li><span id="nav-count">#</span> Navigation</li>
+                <li><span id="region-count">#</span> Region</li>
+              </ul>
+
+            </div>
+          </aside>
+
+<script>
+window.addEventListener('load', () => {
+
+  function countElement(elem) {
+    const elems = document.querySelectorAll(`${elem}`);
+    return elems.length;
+  }
+
+  document.querySelector('#nav-count').textContent = countElement('nav');
+  document.querySelector('#region-count').textContent = countElement('section[aria-label], section[aria-labelledby');
+
+});
+</script>
+
+                      <aside class="container" aria-labelledby="standards">
+            <h2 id="standards">Related Standards</h2>
+
+            <ul class="resources">
+              <li><a href="https://w3.org/WAI/ARIA/apg/">ARIA Authoring Practices</a></li>
+              <li><a href="https://www.w3.org/TR/wai-aria/">ARIA Specification</a></li>
+
+              <li><a href="https://www.w3.org/TR/accname-1.2/">Accessible Name and Description Computation 1.2</a></li>
+              <li><a href="https://www.w3.org/TR/html-aria/">ARIA in HTML</a></li>
+              <li><a href="http://www.w3.org/TR/core-aam-1.2/">Core Accessibility API Mappings 1.2</a></li>
+              <li><a href="https://w3c.github.io/html-aam/">HTML Accessibility API Mappings</a></li>
+              <li><a href="http://www.w3.org/TR/WCAG/">WCAG Specification</a></li>
+              <li><a href="https://html.spec.whatwg.org/">HTML Specification</a></li>
+            </ul>
+
+          </aside>
+
+        </div>
+      </div>
     </div>
             <!-- Footer-->
         <footer class="py-5">
@@ -405,6 +506,13 @@
 
             <!-- Bootstrap core JS-->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+
+        <!-- Tabs-->
+        <script src="./js/tabs.js"></script>
+
+        <!-- Visually-->
+        <script src="./js/visua11y.js"></script>
+        <script src="./js/show.js"></script>
 
         <!-- SkipTo.js -->
         <script data-skipto="colorTheme:skipto;positionLeft: 30%" src="https://skipto-landmarks-headings.github.io/page-script-5/dist/skipto.min.js"></script>

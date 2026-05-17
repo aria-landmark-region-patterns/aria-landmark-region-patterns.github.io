@@ -7,14 +7,12 @@
     {% include "./header.njk" %}
 
     <!-- Main section-->
-    <div id="main-section" class="container px-4">
-      <main class="container px-4">
-        <div class="row gx-4 justify-content-center">
-          <div class="col-lg-10">
+    <div id="main-section" class="container">
 
-            {% block content %}
+    {% if dropdownPages %}
+      <div class="row gx-4 justify-content-left">
+        <div class="col-lg-12">
 
-                {% if dropdownPages %}
                 <nav class="second-level" aria-label="{{dropdownName}}">
                   {% for page in dropdownPages %}
                     {% if loop.first %}
@@ -26,16 +24,29 @@
                     {% endif %}
                   {% endfor %}
                 </nav>
-                {% endif %}
+        </div>
+      </div>
+    {% endif %}
+
+      <div class="row gx-4 justify-content-left">
+        <div class="col-lg-9">
+          <main class="container">
+
+            {% block content %}
+
 
                 <h1>{{title}}</h1>
 
                 {% include './' + content %}
 
             {% endblock %}
-          </div>
+          </main>
         </div>
-      </main>
+        <div class="col-lg-3">
+            {% include "./aside-visualize.njk" %}
+            {% include "./aside-standards.njk" %}
+        </div>
+      </div>
     </div>
     {% include "./footer.njk" %}
     {% include "./scripts.njk" %}

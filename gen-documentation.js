@@ -12,8 +12,8 @@ const version     = "1.0";
 const tagLineName = "ARIA Landmark Region Patterns";
 const projectName   = "ARIA Landmark Region Patterns Example";
 
-const issuesURL   = "https://github.com/aria-landmark-region-patterns/issues";
-const issuesEmail = "jongund@illinois.edu";
+const issuesURL   = "https://github.com/aria-landmark-region-patterns/aria-landmark-region-patterns.github.io/issues";
+const issuesEmail = "jongund@openweba11y.com";
 
 const outputDirectory   = './docs/';
 const templateDirectory = './src-docs/';

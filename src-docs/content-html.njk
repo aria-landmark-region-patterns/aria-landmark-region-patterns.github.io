@@ -11,12 +11,26 @@
               <tbody>
                 <tr>
                   <td><code>aside</code></td>
-                  <td><code>complementary</code></td>
+                  <td>
+                    <ol>
+                      <li>
+                        The <code>aside</code> element <em>without a label</em> is a <code>complementary</code> landmark when not in the context (e.g a descendant) of any of the following HTML sectioning elements:
+                        <ul>
+                          <li><code>article</code></li>
+                          <li><code>aside</code></li>
+                          <li><code>main</code></li>
+                          <li><code>nav</code></li>
+                          <li><code>section</code></li>
+                        </ul>
+                      </li>
+                      <li>
+                        The <code>aside</code> element <em>with a <a href="index.html#aria_lh_step3">label</a></em> is a <code>contentinfo</code> landmark in any context.
+                      </li>
+                  </td>
                 </tr>
                 <tr>
                   <td><code>footer</code></td>
-                  <td><code>contentinfo</code> when in context of the <code>body</code> element.
-                    The <code>footer</code> element is <strong>not</strong> a <code>contentinfo</code> landmark when it is a descendant of the following HTML sectioning elements:
+                  <td>The <code>footer</code> element is a <code>contentinfo</code> landmark when it is <em>not</em> in the context (e.g a descendant) of any of the following HTML sectioning elements:
                     <ul>
                       <li><code>article</code></li>
                       <li><code>aside</code></li>
@@ -24,16 +38,15 @@
                       <li><code>nav</code></li>
                       <li><code>section</code></li>
                     </ul>
-                    </td>
+                  </td>
                 </tr>
                 <tr>
                   <td><code>form</code></td>
-                  <td><code>form</code> when it has an accessible name using <code>aria-labelledby</code>, <code>aria-label</code> or <code>title</code> attributes</td>
+                  <td>The <code>form</code> element is a <code>form</code> landmark when it has a <a href="index.html#aria_lh_step3">label</a>.</td>
                 </tr>
                 <tr>
                   <td><code>header</code></td>
-                  <td><code>banner</code> when in context of the <code>body</code> element.
-                    The <code>header</code> element is <strong>not</strong> a <code>banner</code> landmark when it is a descendant of the following HTML sectioning elements:
+                  <td>The <code>header</code> element is a <code>banner</code> landmark when it is <em>not</em> in the context (e.g a descendant) of any of the following HTML sectioning elements:
                     <ul>
                       <li><code>article</code></li>
                       <li><code>aside</code></li>
@@ -45,16 +58,19 @@
                 </tr>
                 <tr>
                   <td><code>main</code></td>
-                  <td><code>main</code></td>
+                  <td>The <code>main</code> element always defines a <code>main</code> landmark in any  context.</td>
                 </tr>
                 <tr>
                   <td><code>nav</code></td>
-                  <td><code>navigation</code></td>
+                  <td>The <code>nav</code> element always defines a <code>navigation</code> landmark in any context.</td>
                 </tr>
                 <tr>
                   <td><code>section</code></td>
-                  <td><code>region</code> when it has an accessible name using <code>aria-labelledby</code>, <code>aria-label</code> or <code>title</code> attribute</td>
+                  <td>The <code>section</code> element is a <code>region</code> landmark when it has a <a href="index.html#aria_lh_step3">label</a>.</td>
                 </tr>
               </tbody>
             </table>
+
+
+
 

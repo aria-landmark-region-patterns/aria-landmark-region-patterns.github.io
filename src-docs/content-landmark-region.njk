@@ -10,8 +10,16 @@
 
             <section aria-label="Coding Techniques">
               <ul id="myTabs" class="nav nav-tabs" role="tablist">
-                <li class="active"><a id="tab2" href="#tabpanel2" aria-controls="tabpanel2"  role="tab" data-toggle="tab">HTML Techniques</a></li>
-                <li><a id="tab1" href="#tabpanel1" aria-controls="tabpanel1" role="tab" data-toggle="tab">ARIA Techniques</a></li>
+                <li class="nav-item" role="none">
+                  <a class="nav-link" id="tab2" href="#tabpanel2" aria-controls="tabpanel2"  role="tab">
+                    HTML Techniques
+                  </a>
+                  </li>
+                <li class="nav-item" role="none">
+                  <a class="nav-link" id="tab1" href="#tabpanel1" aria-controls="tabpanel1" role="tab">
+                    ARIA Techniques
+                  </a>
+                </li>
               </ul>
               <div class = "tab-content">
                 <div  id="tabpanel2" aria-labelledby="tab2" role="tabpanel" class="tab-pane active">
@@ -20,6 +28,7 @@
                   <h3>HTML Example: Using <code>section[aria-labelledby]</code> attribute</h3>
                   <p>Defines a label for each region using existing content on the page.</p>
                   <div class="code">
+                    <code>
                     &lt;main&gt;
                     <br>
                     <br>
@@ -31,7 +40,7 @@
                     &nbsp;&nbsp;&nbsp;&nbsp;&lt;h2 <strong>id="region1"</strong>&gt;title for region area 1&lt;/h2&gt;
                     <br>
                     <br>
-                    &nbsp;&nbsp;&nbsp;&nbsp;... <em>content for region area 1</em> ...
+                    &nbsp;&nbsp;&nbsp;&nbsp;<em>... content for region area 1 ...</em>
                     <br>
                     <br>
                     &nbsp;&nbsp;<strong>&lt;/section&gt;</strong>
@@ -43,18 +52,20 @@
                     &nbsp;&nbsp;&nbsp;&nbsp;&lt;h2 <strong>id="region2"</strong>&gt;title for region area 2&lt;/h2&gt;
                     <br>
                     <br>
-                    &nbsp;&nbsp;&nbsp;&nbsp;... <em>content for region area 2</em> ...
+                    &nbsp;&nbsp;&nbsp;&nbsp;<em>... content for region area 2 ...</em>
                     <br>
                     <br>
                     &nbsp;&nbsp;<strong>&lt;/section&gt;</strong>
                     <br>
                     <br>
                     &lt;/main&gt;
+                    </code>
                   </div>
 
                    <h3>HTML Example: Using <code>section[aria-label]</code> attribute</h3>
                   <p>Defines a label for each region using attribute value that is only visible to assistive technologies.</p>
                   <div class="code">
+                    <code>
                     &lt;main&gt;
                     <br>
                     <br>
@@ -66,7 +77,7 @@
                     &nbsp;&nbsp;&nbsp;&nbsp;&lt;h2&gt;title for region area 1&lt;/h2&gt;
                     <br>
                     <br>
-                    &nbsp;&nbsp;&nbsp;&nbsp;... <em>content for region area 1</em> ...
+                    &nbsp;&nbsp;&nbsp;&nbsp;<em>... content for region area 1 ...</em>
                     <br>
                     <br>
                     &nbsp;&nbsp;<strong>&lt;/section&gt;</strong>
@@ -78,19 +89,21 @@
                     &nbsp;&nbsp;&nbsp;&nbsp;&lt;h2&gt;title for region area 2&lt;/h2&gt;
                     <br>
                     <br>
-                    &nbsp;&nbsp;&nbsp;&nbsp;... <em>content for region area 2</em> ...
+                    &nbsp;&nbsp;&nbsp;&nbsp;<em>... content for region area 2 ...</em>
                     <br>
                     <br>
                     &nbsp;&nbsp;<strong>&lt;/section&gt;</strong>
                     <br>
                     <br>
                     &lt;/main&gt;
+                    </code>
                   </div>
 
                   <h3>HTML Example: Using <code>section[title]</code> attribute</h3>
                   <p>Defines a label for each region using attribute value that maybe available as a tooltip on some browsers.</p>
                   <br>
                   <div class="code">
+                    <code>
                     &lt;main&gt;
                     <br>
                     <br>
@@ -121,6 +134,7 @@
                     <br>
                     <br>
                     &lt;/main&gt;
+                    </code>
                   </div>
                 </div>
                 <div id="tabpanel1" aria-labelledby="tab1" role="tabpanel" class="tab-pane">
@@ -128,6 +142,7 @@
 
                   <h3>ARIA Example: Using <code>role="region"</code> attribute</h3>
                   <div class="code">
+                    <code>
                     &lt;div role="main"&gt;
                     <br>
                     <br>
@@ -138,7 +153,7 @@
                     &nbsp;&nbsp;&nbsp;&nbsp;&lt;h2 <strong>id="region1"</strong>&gt;title for region area 1&lt;/h2&gt;
                     <br>
                     <br>
-                    &nbsp;&nbsp;&nbsp;&nbsp;... <em>content for region area 1</em> ...
+                    &nbsp;&nbsp;&nbsp;&nbsp;<em>... content for region area 1 ...</em>
                     <br>
                     <br>
                     &nbsp;&nbsp;&lt;/div&gt;
@@ -150,13 +165,14 @@
                     &nbsp;&nbsp;&nbsp;&nbsp;&lt;h2 <strong>id="region2"</strong>&gt;title for region area 2&lt;/h2&gt;
                     <br>
                     <br>
-                    &nbsp;&nbsp;&nbsp;&nbsp;... <em>content for region area 2</em> ...
+                    &nbsp;&nbsp;&nbsp;&nbsp;<em>... content for region area 2 ...</em>
                     <br>
                     <br>
                     &nbsp;&nbsp;&lt;/div&gt;
                     <br>
                     <br>
                     &lt;/div&gt;
+                    </code>
                   </div>
                 </div>
               </div>

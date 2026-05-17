@@ -1,0 +1,41 @@
+          <aside class="container first" aria-labelledby="visualize">
+            <h2 id="visualize">Visualize Landmarks</h2>
+
+            <div class="content">
+               <p id="inst" class="inst">Visually outline the landmarks and/or headings on the page.</p>
+
+               <div class="button">
+                <button type="button" onclick="showLandmarks(event)" aria-describedby="inst">Show Landmarks</button>
+              </div>
+
+               <div class="button">
+                <button type="button" onclick="showHeadings(event)"  aria-describedby="inst">Show Headings</button>
+              </div>
+
+              <h3>Landmarks on Page</h3>
+
+              <ul class="counts">
+                <li>2 Complementary</li>
+                <li>1 Contentinfo</li>
+                <li>1 Banner</li>
+                <li>1 Main</li>
+                <li><span id="nav-count">#</span> Navigation</li>
+                <li><span id="region-count">#</span> Region</li>
+              </ul>
+
+            </div>
+          </aside>
+
+<script>
+window.addEventListener('load', () => {
+
+  function countElement(elem) {
+    const elems = document.querySelectorAll(`${elem}`);
+    return elems.length;
+  }
+
+  document.querySelector('#nav-count').textContent = countElement('nav');
+  document.querySelector('#region-count').textContent = countElement('section[aria-label], section[aria-labelledby');
+
+});
+</script>

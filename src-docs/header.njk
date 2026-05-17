@@ -5,13 +5,26 @@
                aria-label="Primary"
                id="mainNav">
               <div class="container px-4">
-                  <span class="brand">
-                    <span class="icon">
-                      <img src="./images/h2l-128-light.png" alt="Icon for Headings, Landmarks and Links Side Panel">
-                    </span>
-                    <span class="version">
-                      Version {{version}}
-                    </span>
+                <span class="brand">
+                    <svg role="image"
+                         aria-label="Icon"
+                         viewBox="0 0 110 55" xmlns="http://www.w3.org/2000/svg">
+                      <g class="brand">
+                        <g class="aria">
+                          <rect x="0" y="5" width="26" height="52"></rect>
+                          <text x="-49" y="18" transform="rotate(-90)">ARIA</text>
+                        </g>
+                        <g class="landmark">
+                          <rect x="25" y="5" width="100" height="25"></rect>
+                          <text x="28" y="24">Landmark</text>
+                        </g>
+                        <g class="regions">
+                          <rect x="25" y="30" width="100" height="27"></rect>
+                          <text x="28" y="50">Regions</text>
+                        </g>
+                      </g>
+                    </svg>
+                </span>
                   </span>
 
                   <button class="navbar-toggler"
@@ -33,8 +46,14 @@
               </div>
           </nav>
           <div class="tagline">
-            <div class="container px-4" >
-              {{tagLineName}}
+            <div id="main-section" class="container">
+              <div class="row gx-4 justify-content-left">
+                <div class="col-lg-12">
+                  <div class="container" style="position: relative; left: -8px">
+                    {{tagLineName}}
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
        </header>

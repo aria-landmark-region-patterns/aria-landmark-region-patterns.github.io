@@ -9,11 +9,11 @@
             </ul>
             <section aria-label="Coding Techniques">
               <ul id="myTabs" class="nav nav-tabs" role="tablist">
-                <li class="active">
-                  <a id="tab2" href="#tabpanel2" aria-controls="tabpanel2" role="tab" data-toggle="tab">HTML Techniques</a>
+                <li class="nav-item" role="none">
+                  <a class="nav-link" id="tab2" href="#tabpanel2" aria-controls="tabpanel2" role="tab" data-toggle="tab">HTML Techniques</a>
                 </li>
-                <li>
-                  <a id="tab1" href="#tabpanel1" aria-controls="tabpanel1" role="tab" data-toggle="tab">ARIA Techniques</a>
+                <li class="nav-item" role="none">
+                  <a class="nav-link" id="tab1" href="#tabpanel1" aria-controls="tabpanel1" role="tab" data-toggle="tab">ARIA Techniques</a>
                 </li>
               </ul>
               <div class="tab-content">
@@ -27,27 +27,30 @@
                   <h3>HTML Example: One Complementary Landmark on Page</h3>
                   <p>When only one complementary landmark on a page, a label is optional.</p>
                   <div class="code">
+                    <code>
                           <strong>&lt;aside&gt;</strong>
                   <br>
                   <br>
                           &nbsp;&nbsp;&lt;h2&gt;<em>Title for complementary area</em>&lt;h2&gt;<br>
                   <br>
-                          &nbsp;&nbsp;.... <em>complementary content area</em> ....   <br>
+                          &nbsp;&nbsp;<em>... complementary content area ...</em>   <br>
                   <br>
                           <strong>&lt;/aside&gt;</strong>
                   <br>
+                    </code>
                   </div>
 
                   <h3>HTML Example: Multiple Complementary Landmarks</h3>
                   <p>When there is more than one complementary landmark on a page, each should have a unique label.</p>
                   <div class="code">
+                    <code>
                     <strong>&lt;aside aria-labelledby="comp1"&gt;</strong>
                     <br>
                     <br>
                     &nbsp;&nbsp;&lt;h2 <strong>id="comp1"</strong>&gt;<em>Title for complementary area 1</em>&lt;/h2&gt;
                     <br>
                     <br>
-                    &nbsp;&nbsp;... <em>complementary content area 1</em> ...
+                    &nbsp;&nbsp;<em>... complementary content area 1 ...</em>
                    <br>
                    <br>
                     <strong>&lt;/aside&gt;</strong>
@@ -59,11 +62,12 @@
                    &nbsp;&nbsp;&lt;h2 <strong>id="comp2"</strong>&gt;<em>Title for complementary area 2</em>&lt;/h2&gt;
                     <br>
                     <br>
-                    &nbsp;&nbsp;... <em>complementary content area 2</em> ...
+                    &nbsp;&nbsp;<em>... complementary content area 2 ...</em>
                     <br>
                     <br>
                     <strong>&lt;/aside&gt;</strong>
                     <br>
+                    </code>
                   </div>
 
                 </div>
@@ -74,27 +78,30 @@
                   <h3>ARIA Example: One Complementary Landmark on Page</h3>
                   <p>When only one complementary landmark exists on a page, a label is optional.</p>
                   <div class="code">
+                    <code>
                           &lt;div <strong>role="complementary"</strong>&gt;
                   <br>
                   <br>
                           &nbsp;&nbsp;&lt;h2&gt;<em>Title for complementary area</em>&lt;h2&gt;<br>
                   <br>
-                          &nbsp;&nbsp;.... <em>complementary content area</em> ....   <br>
+                          &nbsp;&nbsp;.<em>... complementary content area ...</em>.   <br>
                   <br>
                           &lt;/div&gt;
                   <br>
+                    </code>
                   </div>
 
                   <h3>ARIA Example: Multiple Complementary Landmarks</h3>
                   <p>When there is more than one complementary landmark on a page, each should have a unique label.</p>
                   <div class="code">
+                    <code>
                     &lt;div <strong>role="complementary" aria-labelledby="comp1"</strong>&gt;
                     <br>
                     <br>
                     &nbsp;&nbsp;&lt;h2 <strong>id="comp1"</strong>&gt;<em>Title for complementary area 1</em>&lt;/h2&gt;
                     <br>
                     <br>
-                    &nbsp;&nbsp;... <em>complementary content area 1</em> ...
+                    &nbsp;&nbsp;<em>... complementary content area 1 ...</em>
                    <br>
                    <br>
                     &lt;/div&gt;
@@ -106,11 +113,12 @@
                    &nbsp;&nbsp;&lt;h2 <strong>id="comp2"</strong>&gt;<em>Title for complementary area 2</em>&lt;/h2&gt;
                     <br>
                     <br>
-                    &nbsp;&nbsp;... <em>complementary content area 2</em> ...
+                    &nbsp;&nbsp;<em>... complementary content area 2 ...</em>
                     <br>
                     <br>
                     &lt;/div&gt;
                     <br>
+                    </code>
                   </div>
 
                 </div>

@@ -11,9 +11,15 @@
               <li>If a page includes more than one <code>banner</code> landmark, each should have a unique label.</li>
             </ul>
             <section aria-label="Coding Techniques">
-              <ul id="myTabs" class="nav nav-tabs" role="tablist">
-                <li class="active"><a id="tab2" href="#tabpanel2" aria-controls="tabpanel2" role="tab" data-toggle="tab">HTML Techniques</a></li>
-                <li><a id="tab1" href="#tabpanel1" aria-controls="tabpanel1" role="tab" data-toggle="tab">ARIA Techniques</a></li>
+              <ul class="nav nav-tabs" role="tablist">
+                <li class="nav-item" role="none">
+                  <a class="nav-link" id="tab2" href="#tabpanel2" aria-controls="tabpanel2" role="tab" data-toggle="tab">HTML Techniques</a>
+                </li>
+                <li class="nav-item" role="none">
+                  <a class="nav-link" id="tab1" href="#tabpanel1" aria-controls="tabpanel1" role="tab">
+                    ARIA Techniques
+                  </a>
+                </li>
               </ul>
               <div class="tab-content">
                 <div id="tabpanel2" aria-labelledby="tab2"  role="tabpanel" class="tab-pane active">
@@ -32,21 +38,25 @@
                   </ul>
                   <h3>HTML Example</h3>
                   <div class="code">
-                            <strong>&lt;header&gt;</strong>
-                    <br>
-                            &nbsp;&nbsp;&lt;h1&gt;<em>website information</em>&lt;h1&gt;<br>
-                            &nbsp;&nbsp;.... <em>banner content</em>....   <br>
-                            <strong>&lt;/header&gt;</strong>
+                    <code>
+                              <strong>&lt;header&gt;</strong>
+                      <br>
+                              &nbsp;&nbsp;&lt;h1&gt;<em>page title identifying website</em>&lt;h1&gt;<br>
+                              &nbsp;&nbsp;<em>.... banner content....</em>   <br>
+                              <strong>&lt;/header&gt;</strong>
+                    </code>
                   </div>
                 </div>
                 <div id="tabpanel1" aria-labelledby="tab1" role="tabpanel" class="tab-pane">
                   <p>A <code>role="banner"</code> attribute is used to define a <code>banner</code> landmark.</p>
                   <h3>ARIA Example</h3>
                   <div class="code">
+                    <code>
                           &lt;div <strong>role="banner"</strong>&gt;<br>
                           &nbsp;&nbsp;&lt;h1&gt;<em>page title identifying website</em>&lt;h1&gt;<br>
-                          &nbsp;&nbsp;.... <em>banner content</em>....   <br>
+                          &nbsp;&nbsp;<em>.... banner content....</em>   <br>
                           &lt;/div&gt;<br>
+                    </code>
                   </div>
                 </div>
               </div>

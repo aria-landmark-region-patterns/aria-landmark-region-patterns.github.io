@@ -10,9 +10,17 @@
               <li>If a page includes more than one <code>main</code> landmark, each should have a unique label.</li>
             </ul>
             <section aria-label="Coding Techniques">
-              <ul id="myTabs" class="nav nav-tabs" role="tablist">
-                <li role="presentation" class="active"><a id="tab2" href="#tabpanel2" aria-controls="tabpanel2" role="tab" data-toggle="tab">HTML Techniques</a></li>
-                <li role="presentation"><a id="tab1" href="#tabpanel1" aria-controls="tabpanel1" role="tab" data-toggle="tab">ARIA Techniques</a></li>
+              <ul class="nav nav-tabs" role="tablist">
+                <li class="nav-item" role="none">
+                  <a class="nav-link" id="tab2" href="#tabpanel2" aria-controls="tabpanel2" role="tab">
+                    HTML Techniques
+                  </a>
+                </li>
+                <li class="nav-item" role="none">
+                  <a class="nav-link" id="tab1" href="#tabpanel1" aria-controls="tabpanel1" role="tab">
+                    ARIA Techniques
+                  </a>
+                </li>
               </ul>
               <div class="tab-content">
                 <div id="tabpanel2" aria-labelledby="tab2" role="tabpanel" class="tab-pane active">
@@ -24,14 +32,16 @@
                   <p>When only one main landmark on a page, a label is optional.</p>
 
                   <div class="code">
+                    <code>
                     <strong>&lt;main&gt;</strong>
                     <br>
                     <br>
                     &nbsp;&nbsp;&lt;h1&gt;<em>title for main content</em>&lt;h1&gt;<br>
                     <br>
-                    &nbsp;&nbsp;.... <em>main content area </em> ....   <br>
+                    &nbsp;&nbsp;.<em>... main content area  ...</em>.   <br>
                     <br>
                     <strong>&lt;/main&gt;</strong>
+                    </code>
                   </div>
 
                   <h3>HTML Example: Multiple Main Landmarks</h3>
@@ -39,12 +49,13 @@
                   <p>When there is more than one main landmark on a page, each should have a unique label.</p>
 
                   <div class="code">
+                    <code>
                     <strong>&lt;main  aria-labelledby="<em>title1</em>"&gt;</strong>
                     <br>
                     <br>
                     &nbsp;&nbsp;&lt;h1 <strong>id="<em>title1</em>"</strong>&gt;<em>title for main content area 1</em>&lt;h1&gt;<br>
                     <br>
-                    &nbsp;&nbsp;.... <em>main content area 1</em> ....<br>
+                    &nbsp;&nbsp;.<em>... main content area 1 ...</em>.<br>
                     <br>
                     <strong>&lt;/main&gt;</strong>
                     <br>
@@ -56,11 +67,12 @@
                     <br>
                     &nbsp;&nbsp;&lt;h1 <strong>id="<em>title2</em>"</strong>&gt;<em>title for main content area 2</em>&lt;h1&gt;<br>
                     <br>
-                    &nbsp;&nbsp;.... <em>main content area 2</em> ....<br>
+                    &nbsp;&nbsp;.<em>... main content area 2 ...</em>.<br>
                     <br>
                     <strong>&lt;/main&gt;</strong>
                     <br>
                     <br>
+                    </code>
                   </div>
                 </div>
                 <div id="tabpanel1" aria-labelledby="tab1" role="tabpanel" class="tab-pane">
@@ -71,14 +83,16 @@
                   <p>When only one main landmark exists on a page, a label is optional.</p>
 
                   <div class="code">
+                    <code>
                     &lt;div <strong>role="main"&gt;</strong>
                     <br>
                     <br>
                     &nbsp;&nbsp;&lt;h1&gt;<em>title for main content</em>&lt;h1&gt;<br>
                     <br>
-                    &nbsp;&nbsp;.... <em>main content area</em> ....   <br>
+                    &nbsp;&nbsp;.<em>... main content area ...</em>.   <br>
                     <br>
                     &lt;/div&gt;
+                    </code>
                   </div>
 
                   <h3>ARIA Example: Multiple Main Landmarks</h3>
@@ -86,12 +100,13 @@
                   <p>When there is more than one main landmark on a page, each should have a unique label.</p>
 
                   <div class="code">
+                    <code>
                     &lt;div <strong>role="main"  aria-labelledby="<em>title1</em>"</strong>&gt;
                     <br>
                     <br>
                     &nbsp;&nbsp;&lt;h1 <strong>id="<em>title1</em>"</strong>&gt;<em>title for main content area 1</em>&lt;h1&gt;<br>
                     <br>
-                    &nbsp;&nbsp;.... <em>main content area 1</em> ....<br>
+                    &nbsp;&nbsp;.<em>... main content area 1 ...</em>.<br>
                     <br>
                     &lt;/div&gt;
                     <br>
@@ -103,11 +118,12 @@
                     <br>
                     &nbsp;&nbsp;&lt;h1 <strong>id="<em>title2</em>"</strong>&gt;<em>title for main content area 2</em>&lt;h1&gt;<br>
                     <br>
-                    &nbsp;&nbsp;.... <em>main content area 2</em> ....<br>
+                    &nbsp;&nbsp;.<em>... main content area 2 ...</em>.<br>
                     <br>
                     &lt;/div&gt;
                     <br>
                     <br>
+                    </code>
                   </div>
                 </div>
               </div>
