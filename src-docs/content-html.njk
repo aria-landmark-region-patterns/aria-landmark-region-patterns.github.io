@@ -12,61 +12,63 @@
                 <tr>
                   <td><code>aside</code></td>
                   <td>
-                    <ol>
-                      <li>
-                        The <code>aside</code> element <em>without a label</em> is a <code>complementary</code> landmark when not in the context (e.g a descendant) of any of the following HTML sectioning elements:
-                        <ul>
-                          <li><code>article</code></li>
-                          <li><code>aside</code></li>
-                          <li><code>main</code></li>
-                          <li><code>nav</code></li>
-                          <li><code>section</code></li>
-                        </ul>
-                      </li>
-                      <li>
-                        The <code>aside</code> element <em>with a <a href="index.html#aria_lh_step3">label</a></em> is a <code>contentinfo</code> landmark in any context.
-                      </li>
+
+                    {% include "./landmark-aside.njk" %}
+
                   </td>
                 </tr>
                 <tr>
                   <td><code>footer</code></td>
-                  <td>The <code>footer</code> element is a <code>contentinfo</code> landmark when it is <em>not</em> in the context (e.g a descendant) of any of the following HTML sectioning elements:
-                    <ul>
-                      <li><code>article</code></li>
-                      <li><code>aside</code></li>
-                      <li><code>main</code></li>
-                      <li><code>nav</code></li>
-                      <li><code>section</code></li>
-                    </ul>
+                  <td>
+
+                    {% include "./landmark-footer.njk" %}
+
                   </td>
                 </tr>
                 <tr>
                   <td><code>form</code></td>
-                  <td>The <code>form</code> element is a <code>form</code> landmark when it has a <a href="index.html#aria_lh_step3">label</a>.</td>
+                  <td>
+
+                    {% include "./landmark-form.njk" %}
+
+                  </td>
                 </tr>
                 <tr>
                   <td><code>header</code></td>
-                  <td>The <code>header</code> element is a <code>banner</code> landmark when it is <em>not</em> in the context (e.g a descendant) of any of the following HTML sectioning elements:
-                    <ul>
-                      <li><code>article</code></li>
-                      <li><code>aside</code></li>
-                      <li><code>main</code></li>
-                      <li><code>nav</code></li>
-                      <li><code>section</code></li>
-                    </ul>
+                  <td>
+
+                    {% include "./landmark-header.njk" %}
+
                   </td>
                 </tr>
                 <tr>
                   <td><code>main</code></td>
-                  <td>The <code>main</code> element always defines a <code>main</code> landmark in any  context.</td>
+                  <td>
+
+                    {% include "./landmark-main.njk" %}
+
+                  </td>
                 </tr>
                 <tr>
                   <td><code>nav</code></td>
-                  <td>The <code>nav</code> element always defines a <code>navigation</code> landmark in any context.</td>
+                  <td>
+
+                    {% include "./landmark-nav.njk" %}
+
+                </tr>
+                <tr>
+                  <td><code>search</code></td>
+                  <td>
+
+                    {% include "./landmark-search.njk" %}
+
                 </tr>
                 <tr>
                   <td><code>section</code></td>
-                  <td>The <code>section</code> element is a <code>region</code> landmark when it has a <a href="index.html#aria_lh_step3">label</a>.</td>
+                  <td>
+
+                    {% include "./landmark-section.njk" %}
+
                 </tr>
               </tbody>
             </table>

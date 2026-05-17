@@ -208,10 +208,22 @@
               <div class="tab-content">
 
                 <div role="tabpanel" class="tab-pane active" id="tabpanel2" aria-labelledby="tab2">
-                  <ul>
-                    <li>The HTML <code>aside</code> element defines a <code>complementary</code> landmark when its context is the <code>body</code> or <code>main</code> element.</li>
-                    <li>An HTML <code>aside</code> element with a label defines a <code>complementary</code> landmark when its context is an <code>article</code>, <code>aside</code>, <code>nav</code> or <code>section</code> element.  A label is defined using <code>aria-labelledby</code> or <code>aria-label</code>.</li>
-                  </ul>
+                                      <ol>
+                      <li>
+                        The <code>aside</code> element <em>without a label</em> is a <code>complementary</code> landmark when not in the context (e.g a descendant) of any of the following HTML sectioning elements:
+                        <ul>
+                          <li><code>article</code></li>
+                          <li><code>aside</code></li>
+                          <li><code>main</code></li>
+                          <li><code>nav</code></li>
+                          <li><code>section</code></li>
+                        </ul>
+                      </li>
+                      <li>
+                        The <code>aside</code> element <em>with a <a href="index.html#aria_lh_step3">label</a></em> is a <code>contentinfo</code> landmark in any context.
+                      </li>
+                    </ol>
+
 
                   <h3>HTML Example: One Complementary Landmark on Page</h3>
                   <p>When only one complementary landmark on a page, a label is optional.</p>
