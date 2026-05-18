@@ -736,6 +736,10 @@ main .faq .content h2 {
   font-size: 110%;
 }
 
+main .note {
+  font-weight: bold;
+}
+
 main section h2 {
   margin-top: 2em;
   border-bottom: 1px solid light-dark(var(--textColor), var(--textColorDark));

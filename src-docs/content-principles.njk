@@ -24,7 +24,7 @@
               <li><code>banner</code>, <code>main</code>, <code>complementary</code> and <code>contentinfo</code> landmarks should be top level landmarks.</li>
               <li>Landmark roles can be nested to identify parent/child relationships of the information being presented.</li>
               <li>
-                Note that wrapping  the content  of a modal dialog in a landmark region is unnecessary.
+                <span class="note">Note:</span> Wrapping  the content  of a <em>modal dialog</em> in a landmark region is unnecessary.
                 A landmark that wraps modal content cannot provide any benefit to users because it is not perceivable unless the modal is open.
                 In addition, when a modal is open, a landmark containing its content is superfluous because the modal itself is a container that provides both a name and boundaries.
               </li>
@@ -38,22 +38,26 @@
               </li>
 
               <li>
-                There is one rare circumstance where providing the same label to multiple instances of a landmark can be beneficial: the content and purpose of each instance is identical.
+                If a landmark is only used once on the page it may not require a label.
+                See specific Landmark Roles on label requirements.
+              </li>
+
+              <li>
+               If an landmark region begins with a heading element (e.g. <code>h1-h6</code>) it can be used as the label for the region using <code>aria-labelledby</code>.
+               </li>
+
+              <li>
+                If a landmark requires a label and does not have a heading element, provide a label using the <code>aria-label</code> attribute.  Note: While the <code>title</code> attribute can also be used to provide a label, it is not considered a best practice and is discouraged.
+              </li>
+
+              <li>
+                <span class="note">Note:</span> There is one rare circumstance where providing the same label to multiple instances of a landmark can be beneficial: the content and purpose of each instance is identical.
                 For example, a large search results table has two sets of identical pagination controls -- one above and one below the table, so each set is in a navigation region labelled <q>Search Results</q>.
                 In this case, adding extra information to the label that distinguishes the two instances may be more distracting than helpful.
               </li>
 
               <li>
-                If a landmark is only used once on the page it may not require a label.
-                See Landmark Roles section below.
-              </li>
-
-              <li>If an landmark region begins with a heading element (e.g. <code>h1-h6</code>) it can be used as the label for the region using <code>aria-labelledby</code>.</li>
-
-              <li>If a landmark requires a label and does not have a heading element, provide a label using the <code>aria-label</code> attribute.  Note: While the <code>title</code> attribute can also be used to provide a label, it is not considered a best practice and is discouraged.</li>
-
-              <li>
-                Do not use the landmark role as part of the label.
+                <span class="note">Note:</span> Do not use the landmark role as part of the label.
                 For example, a navigation landmark with a label &quot;Site Navigation&quot; will be announced by a screen reader as &quot;Site Navigation Navigation&quot;.
                 The label should simply be &quot;Site&quot;.
               </li>
