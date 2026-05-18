@@ -6,38 +6,17 @@
   --iconBlue: hsl(216, 60%, 18%);
   --iconBlueDark: hsl(216, 60%, 82%);
 
-  --iconOrange: hsl(22, 100%, 51%);
-  --iconOrangeDark: hsl(22, 100%, 49%);
-
   --iconBackground: hsl(0, 0%, 93%);
   --iconBackgroundDark: hsl(0, 0%, 7%);
 
   --iconWhite: hsl(0, 0%, 100%);
   --iconWhiteDark: hsl(0, 0%, 0%);
 
-  --resultV: hsl(0, 100%, 84%);
-  --resultVDark: hsl(0, 100%, 16%);
-
-  --resultW: hsl(49, 100%, 79%);
-  --resultWDark: hsl(49, 100%, 21%);
-
-  --resultMC: hsl(198, 53%, 81%);
-  --resultMCDark: hsl(198, 53%, 19%);
-
-  --resultP: hsl(90, 67%, 69%);
-  --resultPDark: hsl(90, 67%, 31%);
-
-  --resultNA: hsl(240, 100%, 96.7%);
-  --resultNADark: hsl(240, 100%, 3.3%);
-
-  --resultH: hsl(0, 0%, 87%);
-  --resultHDark: hsl(0, 0%, 3%);
-
   --linkColor: hsl(216, 60%, 18%);
   --linkColorDark: hsl(216, 60%, 82%);
 
-  --linkColorFocus: hsl(22, 100%, 51%, 0.75);
-  --linkColorFocusDark: hsl(22, 100%, 51%, 0.75);
+  --linkColorFocus: hsl(216, 100%, 60%);
+  --linkColorFocusDark: hsl(216, 100%, 40%);
 
   --linkCurrentColor: #000;
   --linkCurrentColorDark: #eee;
@@ -222,7 +201,7 @@ a[href]:focus {
   text-decoration: underline !important;
 }
 
-a[href]:focus {
+a[href]:not([role]):focus {
   outline: 3px solid light-dark(var(--linkColorFocus), var(--linkColorFocusDark)) !important;
 }
 
@@ -770,37 +749,6 @@ main code.result {
   text-align: center;
 }
 
-main code.v {
-  color: light-dark(var(--textColor), var(--textColorDark));
-  background-color: light-dark(var(--resultV), var(--resultVDark));
-}
-
-main code.w {
-  color: light-dark(var(--textColor), var(--textColorDark));
-  background-color: light-dark(var(--resultW), var(--resultWDark));
-}
-
-main code.mc {
-  color: light-dark(var(--textColor), var(--textColorDark));
-  background-color: light-dark(var(--resultMC), var(--resultMCDark));
-}
-
-main code.p {
-  color: light-dark(var(--textColor), var(--textColorDark));
-  background-color: light-dark(var(--resultP), var(--resultPDark));
-}
-
-main code.na {
-  color: light-dark(var(--textColor), var(--textColorDark));
-  background-color: light-dark(var(--resultNA), var(--resultNADark));
-}
-
-main code.h {
-  color: light-dark(var(--textColor), var(--textColorDark));
-  background-color: light-dark(var(--resultH), var(--resultHDark));
-}
-
-
 main [role="tabpanel"] > p,
 main [role="tabpanel"] > ul {
   margin-top: 0.5em;
@@ -813,6 +761,11 @@ section[aria-labelledby] p {
 
 main [role="tabpanel"] > h3 + p {
   margin-top: 0;
+}
+
+main [role="tablist"] [role="tab"].nav-link.active:focus,
+main [role="tablist"] [role="tab"].nav-link.active:focus-visible, {
+  border: none;
 }
 
 footer  {
