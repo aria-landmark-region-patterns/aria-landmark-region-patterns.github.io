@@ -740,6 +740,10 @@ main .note {
   font-weight: bold;
 }
 
+main .recommendation {
+  font-style: italic;
+}
+
 main section h2 {
   margin-top: 2em;
   border-bottom: 1px solid light-dark(var(--textColor), var(--textColorDark));

@@ -138,8 +138,8 @@
             <table class="table table-striped table-hover" aria-label="Default landmark roles for HTML sectioning elements">
               <thead>
                 <tr>
-                  <th>HTML Element</th>
-                  <th>Default Landmark Role</th>
+                  <th>Element</th>
+                  <th>Landmark Role</th>
                 </tr>
               </thead>
               <tbody>
@@ -147,8 +147,7 @@
                   <td><code>aside</code></td>
                   <td>
 
-                                        <ol>
-                      <li>
+                                        <div>
                         The <code>aside</code> element <em>without a label</em> is a <code>complementary</code> landmark when not in the context (e.g a descendant) of any of the following HTML sectioning elements:
                         <ul>
                           <li><code>article</code></li>
@@ -157,11 +156,10 @@
                           <li><code>nav</code></li>
                           <li><code>section</code></li>
                         </ul>
-                      </li>
-                      <li>
+                    </div>
+                    <div>
                         The <code>aside</code> element <em>with a <a href="index.html#aria_lh_step3">label</a></em> is a <code>contentinfo</code> landmark in any context.
-                      </li>
-                    </ol>
+                    </div>
 
 
                   </td>
@@ -187,10 +185,8 @@
                   <td>
 
                     
-                  <ul>
-                    <li>The <code>form</code> element is a <code>form</code> landmark when it has a <a href="index.html#aria_lh_step3">label</a>.</li>
-                    <li>The recommended labeling technique is to use an <code>aria-labelledby</code> reference to a visible heading (e.g. an <code>h1-h6</code>) or <code>legend</code> element.</li>
-                </ul>
+                  <div>The <code>form</code> element is a <code>form</code> landmark when it has a <a href="index.html#aria_lh_step3">label</a>.</div>
+                  <div class="recommendation"> The recommended labeling technique is to use an <code>aria-labelledby</code> reference to a visible heading (e.g. an <code>h2-h6</code>) or <code>legend</code> element.</div>
 
 
 
@@ -247,10 +243,8 @@
                   <td>
 
                     
-                  <ul>
-                    <li>The <code>section</code> element is a <code>region</code> landmark when it has a <a href="index.html#aria_lh_step3">label</a>.</li>
-                    <li>The recommended labeling technique is to use an <code>aria-labelledby</code> reference to a visible heading (e.g. an <code>h1-h6</code>) element.</li>
-                </ul>
+                  <div>The <code>section</code> element is a <code>region</code> landmark when it has a <a href="index.html#aria_lh_step3">label</a>.</div>
+                  <div class="recommendation">The recommended labeling technique is to use an <code>aria-labelledby</code> reference to a visible heading (e.g. an <code>h2-h6</code>) element.</div>
 
 
 
