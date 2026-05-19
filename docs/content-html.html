@@ -31,7 +31,7 @@
                id="mainNav">
               <div class="container px-4">
                 <span class="brand">
-                    <svg role="image"
+                    <svg role="img"
                          aria-label="Icon"
                          viewBox="0 0 110 55" xmlns="http://www.w3.org/2000/svg">
                       <g class="brand">
@@ -140,7 +140,7 @@
                 <tr>
                   <th>Element</th>
                   <th>Landmark</th>
-                  <th>Context</th>
+                  <th>Conditions</th>
                 </tr>
               </thead>
               <tbody>
@@ -150,7 +150,7 @@
                   <td>
 
                                         <div>
-                        The <code>aside</code> element <em>without a label</em> is a <code>complementary</code> landmark when <strong>not</strong> in the context (e.g a descendant) of any of the following HTML sectioning elements:
+                        The <code>aside</code> element <em>without a label</em> is a <code>complementary</code> landmark when <strong>not</strong> a descendant of any of the following HTML sectioning elements:
                         <ul>
                           <li><code>article</code></li>
                           <li><code>aside</code></li>
@@ -170,7 +170,7 @@
                   <td><code>contentinfo</code></td>
                   <td>
 
-                                      The <code>footer</code> element is a <code>contentinfo</code> landmark when it is <strong>not</strong> in the context (e.g a descendant) of any of the following HTML sectioning elements:
+                                      The <code>footer</code> element is a <code>contentinfo</code> landmark when it is <strong>not</strong> a descendant of any of the following HTML sectioning elements:
                     <ul>
                       <li><code>article</code></li>
                       <li><code>aside</code></li>
@@ -200,10 +200,11 @@
                   <td><code>banner</code></td>
                   <td>
 
-                                        The <code>header</code> element is a <code>banner</code> landmark when it is <strong>not</strong> in the context (e.g a descendant) of any of the following HTML sectioning elements:
+                                        The <code>header</code> element is a <code>banner</code> landmark when it is <strong>not</strong> a descendant of any of the following HTML sectioning elements:
                     <ul>
                       <li><code>article</code></li>
                       <li><code>aside</code></li>
+                      <li><code>main</code></li>
                       <li><code>nav</code></li>
                       <li><code>section</code></li>
                     </ul>
@@ -217,7 +218,7 @@
                   <td><code>main</code></td>
                   <td>
 
-                                       The <code>main</code> element always defines a <code>main</code> landmark in any context.
+                                       The <code>main</code> element always defines a <code>main</code> landmark.
 
 
 
@@ -229,7 +230,7 @@
                   <td><code>navigation</code></td>
                   <td>
 
-                                      The <code>nav</code> element always defines a <code>navigation</code> landmark in any context.</td>
+                                      The <code>nav</code> element always defines a <code>navigation</code> landmark.</td>
 
 
                 </tr>
@@ -238,7 +239,7 @@
                   <td><code>search</code></td>
                   <td>
 
-                                       The <code>search</code> element always defines a <code>search</code> landmark in any context.
+                                       The <code>search</code> element always defines a <code>search</code> landmark.
 
 
 
@@ -333,7 +334,7 @@ window.addEventListener('load', () => {
             <!-- Footer-->
         <footer class="py-5">
             <div class="feedback container px-4 text-center">
-            <a href="https://www.w3.org/WAI/ARIA/apg/">ARIA Authoring Practices</a> |
+            <a href="https://w3.org/WAI/ARIA/apg/">ARIA Authoring Practices</a> |
             <a href="about.html#privacy">Privacy Policy</a> |
             <a href="about.html#feedback">Feedback</a>
             </div>

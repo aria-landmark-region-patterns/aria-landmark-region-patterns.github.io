@@ -267,6 +267,10 @@ div.language-html {
   display: flex;
 }
 
+code {
+  color: #b01414 !important;
+}
+
 div.language-html pre > code {
   padding: 0;
   margin: 0;
