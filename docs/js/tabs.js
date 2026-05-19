@@ -116,3 +116,15 @@ window.addEventListener('load', () => {
 
   });
 });
+
+// Set aria-current
+
+window.addEventListener('load', () => {
+  const links = Array.from(document.querySelectorAll('a[href]'));
+  links.forEach( (link) => {
+    if (window.location.href.includes(link.href)) {
+      link.setAttribute('aria-current', 'page');
+    }
+  });
+});
+
