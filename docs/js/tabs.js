@@ -122,7 +122,7 @@ window.addEventListener('load', () => {
 window.addEventListener('load', () => {
   const links = Array.from(document.querySelectorAll('a[href]'));
   links.forEach( (link) => {
-    if (window.location.href.includes(link.href)) {
+    if (window.location.href.includes(link.href.split('#')[0])) {
       link.setAttribute('aria-current', 'page');
     }
   });
