@@ -23,6 +23,14 @@
                 <li><span id="region-count">#</span> Region</li>
               </ul>
 
+              <h3>Headings on Page</h3>
+
+              <ul class="counts">
+                <li><span id="h1-count"></span> Heading Level 1 (<code>h1</code>)</li>
+                <li><span id="h2-count"></span> Heading Level 2 (<code>h2</code>)</li>
+                <li><span id="h3-count"></span> Heading Level 3 (<code>h3</code>)</li>
+              </ul>
+
             </div>
           </aside>
 
@@ -36,6 +44,11 @@ window.addEventListener('load', () => {
 
   document.querySelector('#nav-count').textContent = countElement('nav');
   document.querySelector('#region-count').textContent = countElement('section[aria-label], section[aria-labelledby');
+
+  document.querySelector('#h1-count').textContent = countElement('h1');
+  document.querySelector('#h2-count').textContent = countElement('h2');
+  document.querySelector('#h3-count').textContent = countElement('h3');
+
 
 });
 </script>
