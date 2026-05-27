@@ -271,7 +271,7 @@
         </div>
         <div class="col-lg-3">
                       <aside class="container first" aria-labelledby="visualize">
-            <h2 id="visualize">Visualize Landmarks</h2>
+            <h2 id="visualize">Visualize</h2>
 
             <div class="content">
                <p id="inst" class="inst">Visually outline the landmarks and/or headings on the page.</p>
@@ -284,25 +284,59 @@
                 <button class="btn btn-primary" type="button" onclick="showHeadings(event)"  aria-describedby="inst">Show Headings</button>
               </div>
 
-              <h3>Landmarks on Page</h3>
 
-              <ul class="counts">
-                <li>Complementary: 1</li>
-                <li>Contentinfo: 1</li>
-                <li>Banner: 1</li>
-                <li>Main: 1</li>
-                <li>Navigation: <span id="nav-count">#</span></li>
-                <li>Region: <span id="region-count">#</span></li>
-              </ul>
+              <table class="table striped" class="counts" aria-label="Count of landmarks on the page">
+                <thead>
+                  <tr>
+                    <th>Landmark</th>
+                    <th>Count</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><code>complementary</code></li>
+                    <td class="text-center">1</td>
+                  </tr>
+                  <tr>
+                    <td><code>contentinfo</code></li>
+                    <td class="text-center">1</td>
+                  </tr>
+                  <tr>
+                    <td><code>main</code></li>
+                    <td class="text-center">1</td>
+                  </tr>
+                  <tr>
+                    <td><code>navigation</code></li>
+                    <td class="text-center"><span id="nav-count">#</span></td>
+                  </tr>
+                  <tr>
+                    <td><code>region</code></li>
+                    <td class="text-center"><span id="region-count">#</span></td>
+                  </tr>
+                </tbody>
+             </table>
 
-              <h3>Headings on Page</h3>
-
-              <ul class="counts">
-                <li>H1: <span id="h1-count"></span></li>
-                <li>H2: <span id="h2-count"></span></li>
-                <li>H3: <span id="h3-count"></span></li>
-              </ul>
-
+             <table class="table striped" class="counts" aria-label="Count of headings on the page">
+                <thead>
+                  <tr>
+                    <th>Headings</th>
+                    <th>Count</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><code>H1</code></td>
+                    <td class="text-center"><span id="h1-count"></span></td>
+                  <tr>
+                    <td><code>H2</code></td>
+                    <td class="text-center"><span id="h2-count"></span></td>
+                  </tr>
+                  <tr>
+                    <td><code>H3</code></td>
+                    <td class="text-center"><span id="h3-count"></span></td>
+                  </tr>
+                </tbody>
+              </table>
             </div>
           </aside>
 
