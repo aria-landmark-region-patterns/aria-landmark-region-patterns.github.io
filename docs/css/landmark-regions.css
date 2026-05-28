@@ -53,6 +53,9 @@
   --faqBackground:  hsl(195, 100%, 92%);
   --faqBackgroundDark: hsl(195, 100%, 15%);
 
+  --codeColor: hsl(0, 80%, 30%);
+  --codeColorDark: hsl(0, 80%, 70%);
+
 }
 
 
@@ -274,7 +277,7 @@ div.language-html {
 }
 
 code {
-  color: #b01414 !important;
+  color: light-dark(var(--codeColor), var(--codeColorDark)) !important;
 }
 
 div.language-html pre > code {
@@ -598,6 +601,12 @@ table.table tbody th a[href] {
   font-weight: normal;
 }
 
+table.table th,
+table.table td {
+  color: light-dark(var(--textColor), var(--textColorDark));
+  background-color: light-dark(var(--backgroundColor), var(--backgroundColorDark));
+}
+
 table.table tbody td ul,
 table.table tbody td ol {
   margin: 0;
@@ -785,6 +794,15 @@ main [role="tablist"] [role="tab"].nav-link.active:focus,
 main [role="tablist"] [role="tab"].nav-link.active:focus-visible, {
   border: none;
 }
+
+main [role="tablist"].nav-tabs .nav-item:has([aria-selected="true"]),
+main [role="tablist"].nav-tabs .nav-link[aria-selected="true"] {
+  color: light-dark(var(--textColor), var(--textColorDark));
+  background-color: light-dark(var(--backgroundColor), var(--backgroundColorDark));
+  border-bottom-color: light-dark(var(--backgroundColor), var(--backgroundColorDark));
+}
+
+
 
 footer  {
   margin: 0;
