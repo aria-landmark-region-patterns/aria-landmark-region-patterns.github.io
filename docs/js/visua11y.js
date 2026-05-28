@@ -83,7 +83,7 @@ function initLandmarks() {
   var targetList = [{ selector: 'aside:not([role]), [role~="complementary"], [role~="COMPLEMENTARY"]', color: "maroon", label: "complementary" },
                     { selector: 'form[aria-labelledby], form[aria-label], form[title], [role~="form"], [role~="form"]', color: "maroon", label: "form" },
                     { selector: 'footer, [role~="contentinfo"], [role~="CONTENTINFO"]', filter: isContentinfo, color: "olive", label: "contentinfo" },
-                    { selector: 'nav, [role~="navigation"], [role~="NAVIGATION"]', color: "green", label: "navigation" },
+                    { selector: 'nav, [role~="navigation"], [role~="NAVIGATION"], skip-to-content', color: "green", label: "navigation" },
                     { selector: '[role~="region"][aria-labelledby], [role~="REGION"][aria-labelledby]', color: "teal", label: "region" },
                     { selector: '[role~="region"][aria-label], [role~="REGION"][aria-label]', color: "teal", label: "region" },
                     { selector: 'section[aria-labelledby], section[aria-label]', color: "teal", label: "region" },

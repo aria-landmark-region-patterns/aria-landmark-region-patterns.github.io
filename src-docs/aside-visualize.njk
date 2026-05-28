@@ -69,19 +69,22 @@
           </aside>
 
 <script>
+
 window.addEventListener('load', () => {
 
-  function countElement(elem) {
-    const elems = document.querySelectorAll(`${elem}`);
+  function countElement(selector) {
+    const elems = document.querySelectorAll(`${selector}`);
     return elems.length;
   }
 
-  document.querySelector('#nav-count').textContent = countElement('nav');
-  document.querySelector('#region-count').textContent = countElement('section[aria-label], section[aria-labelledby');
+  setTimeout( () => {
+    document.querySelector('#nav-count').textContent = countElement('nav, skip-to-content');
+    document.querySelector('#region-count').textContent = countElement('section[aria-label], section[aria-labelledby');
 
-  document.querySelector('#h1-count').textContent = countElement('h1');
-  document.querySelector('#h2-count').textContent = countElement('h2');
-  document.querySelector('#h3-count').textContent = countElement('h3');
+    document.querySelector('#h1-count').textContent = countElement('h1');
+    document.querySelector('#h2-count').textContent = countElement('h2');
+    document.querySelector('#h3-count').textContent = countElement('h3');
+   }, 300);
 
 
 });
