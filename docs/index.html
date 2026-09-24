@@ -182,9 +182,8 @@
                </li>
 
               <li>
-                If a landmark requires a label and does not have a heading element, provide a label using the <code>aria-label</code> attribute.  Note: While the <code>title</code> attribute can also be used to provide a label, it is not considered a best practice and is discouraged.
+                If a landmark requires a label and does not have a heading element, provide a label using the <code>aria-label</code> attribute.
               </li>
-
               <li>
                 <span class="note">Note:</span> There is one rare circumstance where providing the same label to multiple instances of a landmark can be beneficial: the content and purpose of each instance is identical.
                 For example, a large search results table has two sets of identical pagination controls -- one above and one below the table, so each set is in a navigation region labelled <q>Search Results</q>.
@@ -195,6 +194,9 @@
                 <span class="note">Note:</span> Do not use the landmark role as part of the label.
                 For example, a navigation landmark with a label &quot;Site Navigation&quot; will be announced by a screen reader as &quot;Site Navigation Navigation&quot;.
                 The label should simply be &quot;Site&quot;.
+              </li>
+              <li>
+                <span class="note">Note:</span> While the <code>title</code> attribute can also be used to provide a label, it is not considered a best practice and is discouraged.
               </li>
             </ul>
 
