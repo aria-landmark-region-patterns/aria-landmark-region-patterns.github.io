@@ -185,20 +185,24 @@
                 If a landmark requires a label and does not have a heading element, provide a label using the <code>aria-label</code> attribute.
               </li>
               <li>
-                <span class="note">Note:</span> There is one rare circumstance where providing the same label to multiple instances of a landmark can be beneficial: the content and purpose of each instance is identical.
-                For example, a large search results table has two sets of identical pagination controls -- one above and one below the table, so each set is in a navigation region labelled <q>Search Results</q>.
-                In this case, adding extra information to the label that distinguishes the two instances may be more distracting than helpful.
+                <span class="note">Labeling Notes:</span>
+                <ul>
+                  <li>
+                    There is one rare circumstance where providing the <strong><em>same</em></strong> label to multiple instances of a landmark can be beneficial: the content and purpose of each instance is identical.
+                    For example, a large search results table has two sets of identical pagination controls -- one above and one below the table, so each set is in a navigation region labelled <q>Search Results</q>.
+                    In this case, adding extra information to the label that distinguishes the two instances may be more distracting than helpful.
+                  </li>
+                  <li>
+                    Do <strong><em>not</em></strong> use the landmark role as part of the label.
+                    For example, a navigation landmark with a label &quot;Site Navigation&quot; will be announced by a screen reader as &quot;Site Navigation Navigation&quot;.
+                    The label should simply be &quot;Site&quot;.
+                  </li>
+                  <li>
+                    While the <code>title</code> attribute can also be used to provide a label, it is not considered a best practice and is discouraged.
+                  </li>
+                </ul>
               </li>
-
-              <li>
-                <span class="note">Note:</span> Do not use the landmark role as part of the label.
-                For example, a navigation landmark with a label &quot;Site Navigation&quot; will be announced by a screen reader as &quot;Site Navigation Navigation&quot;.
-                The label should simply be &quot;Site&quot;.
-              </li>
-              <li>
-                <span class="note">Note:</span> While the <code>title</code> attribute can also be used to provide a label, it is not considered a best practice and is discouraged.
-              </li>
-            </ul>
+              </ul>
 
 
             
@@ -275,27 +279,7 @@
             </div>
           </aside>
 
-<script>
 
-window.addEventListener('load', () => {
-
-  function countElement(selector) {
-    const elems = document.querySelectorAll(`${selector}`);
-    return elems.length;
-  }
-
-  setTimeout( () => {
-    document.querySelector('#nav-count').textContent = countElement('nav, skip-to-content');
-    document.querySelector('#region-count').textContent = countElement('section[aria-label], section[aria-labelledby');
-
-    document.querySelector('#h1-count').textContent = countElement('h1');
-    document.querySelector('#h2-count').textContent = countElement('h2');
-    document.querySelector('#h3-count').textContent = countElement('h3');
-   }, 300);
-
-
-});
-</script>
 
                       <aside class="container" aria-labelledby="standards">
             <h2 id="standards">Related Standards</h2>
@@ -345,6 +329,9 @@ window.addEventListener('load', () => {
         <!-- Visually-->
         <script src="./js/visua11y.js"></script>
         <script src="./js/show.js"></script>
+
+        <!-- Structural Element Counts -->
+        <script src="./js/structure-counts.js"></script>
 
         <!-- SkipTo.js -->
         <script data-skipto="colorTheme:skipto;positionLeft: 30%" src="https://skipto-landmarks-headings.github.io/page-script-5/dist/skipto.min.js"></script>

@@ -328,27 +328,7 @@
             </div>
           </aside>
 
-<script>
 
-window.addEventListener('load', () => {
-
-  function countElement(selector) {
-    const elems = document.querySelectorAll(`${selector}`);
-    return elems.length;
-  }
-
-  setTimeout( () => {
-    document.querySelector('#nav-count').textContent = countElement('nav, skip-to-content');
-    document.querySelector('#region-count').textContent = countElement('section[aria-label], section[aria-labelledby');
-
-    document.querySelector('#h1-count').textContent = countElement('h1');
-    document.querySelector('#h2-count').textContent = countElement('h2');
-    document.querySelector('#h3-count').textContent = countElement('h3');
-   }, 300);
-
-
-});
-</script>
 
                       <aside class="container" aria-labelledby="standards">
             <h2 id="standards">Related Standards</h2>
@@ -398,6 +378,9 @@ window.addEventListener('load', () => {
         <!-- Visually-->
         <script src="./js/visua11y.js"></script>
         <script src="./js/show.js"></script>
+
+        <!-- Structural Element Counts -->
+        <script src="./js/structure-counts.js"></script>
 
         <!-- SkipTo.js -->
         <script data-skipto="colorTheme:skipto;positionLeft: 30%" src="https://skipto-landmarks-headings.github.io/page-script-5/dist/skipto.min.js"></script>
